@@ -5,7 +5,7 @@ import pandas as pd
 import sys
     
 # Load data
-melbourne_file_path = '../melb_data.csv'
+melbourne_file_path = '/Users/shlok_vaishnavi/Documents/ML/Random_forests/P1/melb_data.csv'
 try:
     melbourne_data = pd.read_csv(melbourne_file_path)
 except FileNotFoundError:

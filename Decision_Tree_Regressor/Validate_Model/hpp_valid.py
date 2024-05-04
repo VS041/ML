@@ -14,7 +14,7 @@ def get_mae(max_leaf_nodes,train_X,value_x,train_y,val_y):
 # print("current directory", os.getcwd())
 # print("list of directories", os.listdir(os.getcwd()))
 # iowa_file_path = '../ML/Validate_Model/train.csv'
-iowa_file_path = '/Users/shlok_vaishnavi/Documents/ML/Validate_Model/train.csv'
+iowa_file_path = '/Users/shlok_vaishnavi/Documents/ML/Decision_Tree_Regressor/Validate_Model/train.csv'
 try:
     home_data = pd.read_csv(iowa_file_path)
 except FileNotFoundError:
@@ -70,7 +70,7 @@ for max_leaf_nodes in candidate_max_leaf_nodes:
 # store the best tree size value
 best_tree_size = min(scores, key=scores.get)
 final_model = DecisionTreeRegressor(max_leaf_nodes=best_tree_size,random_state=0)
-
+# concatenate all data
 all_X = pd.concat([train_X,val_X])
 all_y = pd.concat([train_y,val_y])
 
